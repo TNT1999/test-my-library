@@ -1,4 +1,4 @@
-const value = {
+const response = {
   status: "success",
   message: "Success.",
   data: {
@@ -14,6 +14,8 @@ const value = {
       next_level_staking: "2000.0"
   }
 }
+
+const round = (a) => a
 
 const mapVIPStaking = data => {
   const totalStaking = round(data.total_staking);
@@ -40,6 +42,5 @@ const mapVIPStaking = data => {
   }
 }
 
-const data  = mapVIPStaking(value)
-
-export default data
+const data = mapVIPStaking(response.data)
+module.exports = data
